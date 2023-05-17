@@ -1,0 +1,37 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+<h3> Task Form </h3>
+<a href="{% url 'tasks' %}">Go Back</a>
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form.as_p}}
+    <div>
+        <label for="id_energy_consumption">Energy Consumption:</label>
+        <select id="id_energy_consumption" name="energy_consumption">
+          <option value="{{ task.High }}">High Impact</option>
+          <option value="{{ task.Medium }}">Medium Impact</option>
+          <option value="{{ task.Low }}">Low Impact</option>
+        </select>
+      </div>
+      <div>
+        <label for="id_carbon_footprint">Carbon Footprint:</label>
+        <select id="id_carbon_footprint" name="carbon_footprint">
+          <option value="{{ task.High }}">High Impact</option>
+          <option value="{{ task.Medium }}">Medium Impact</option>
+          <option value="{{ task.Low }}">Low Impact</option>
+        </select>
+      </div>
+      <div>
+        <label for="id_water_usage">Water Usage:</label>
+        <select id="id_water_usage" name="water_usage">
+          <option value="{{ task.High }}">High Impact</option>
+          <option value="{{ task.Medium }}">Medium Impact</option>
+          <option value="{{ task.Low }}">Low Impact</option>
+        </select>
+      </div>
+    <input type="submit" value="sumbit">
+</form>
+
+{% endblock content %}
