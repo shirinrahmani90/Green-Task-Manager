@@ -1,0 +1,71 @@
+# Green Task Manager Application
+
+This is a Django-based to-do list application that allows users to manage their tasks. It also includes features related to task sustainability, allowing users to track the eco-friendliness and sustainability of their tasks.
+
+## Features
+
+### Completed Features
+
+- User Authentication: The application utilizes Django's built-in user authentication system, allowing users to register, log in, and log out.
+- Task Management: Users can create, view, update, and delete tasks.
+- Task Properties: Each task includes the following properties:
+  - Title: The title or name of the task.
+  - Description: A detailed description of the task.
+  - Completion Status: Whether the task is complete or not.
+  - Sustainability Rating: A numerical rating indicating the eco-friendliness or sustainability of the task.
+  - Energy Consumption: The impact of the task on energy consumption (High, Medium, or Low).
+  - Carbon Footprint: The impact of the task on carbon footprint (High, Medium, or Low).
+  - Water Usage: The impact of the task on water usage (High, Medium, or Low).
+  - Created: The date and time when the task was created.
+
+### In Progress Features
+
+- Task Sorting
+- Task Statistics (Visualization related to User's tasks)
+
+## Installation
+
+1. Clone the repository: ` https://github.com/shirinrahmani90/Green-Task-Manager`
+2. Change into the project directory: `cd <Green-Task-Manager>`
+3. Create a virtual environment: `python -m venv env`
+4. Activate the virtual environment:
+   - Windows: `.\env\Scripts\activate`
+   - macOS/Linux: `source env/bin/activate`
+5. Install the dependencies: `pip install -r requirements.txt`
+6. Run database migrations: `python manage.py migrate`
+7. Start the development server: `python manage.py runserver`
+
+## Usage
+
+1. Access the application in your web browser at `http://localhost:8000`.
+2. Register a new user account or log in with an existing account.
+3. Use the navigation menu to manage your tasks:
+   - **Tasks**: View, create, update, and delete tasks.
+   - **My Profile**: View and update your profile information.
+   - **Logout**: Log out from your account.
+
+## Project Structure
+
+- `taskmanager/`: The main Django project directory.
+- `base/`: The Django app directory containing the core application logic.
+  - `models.py`: Defines the database models, including the `Task` model.
+  - `views.py`: Contains the view functions and classes for handling HTTP requests and rendering templates.
+  - `forms.py`: Defines the forms used for user registration and task creation/update.
+  - `templates/`: Contains the HTML templates used for rendering the web pages.
+  - `static/`: Contains static files such as CSS stylesheets and JavaScript files.
+- `manage.py`: The Django project management script.
+
+## Technologies Used
+
+- Django: Python web framework.
+- HTML: The standard markup language for creating web pages.
+- Bootstrap: A popular CSS framework.
+
+## Contributing
+
+Contributions to the Green Task Manager Application are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
